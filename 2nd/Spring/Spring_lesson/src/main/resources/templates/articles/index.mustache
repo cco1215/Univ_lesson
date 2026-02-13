@@ -1,0 +1,29 @@
+{{> layouts/header}}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">아이디</th>
+        <th scope="col">제목</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#articleList}}
+        <tr>
+            <td>{{id}}</td>
+            <td><a href="/article/{{id}}"> {{title}} </td>
+        </tr>
+    {{/articleList}}
+    </tbody>
+</table>
+
+{{#msg}}
+
+    <script>
+        alert("{{msg}}");
+    </script>
+
+{{/msg}}
+
+
+{{> layouts/footer}}

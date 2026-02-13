@@ -1,0 +1,10 @@
+{{> layouts/header}}
+
+<div class = "bg-dark text-white p-5">
+    <h1> {{quote}} </h1>
+    <form action="/randomQuote" method="get">
+    <button type="button" class="btn btn-danger"> 리롤 </button>
+    </form>
+</div>
+
+{{> layouts/footer}}

@@ -1,0 +1,18 @@
+{{> layouts/header}}
+
+<h1> 세상글 </h1>
+{{#articleItem}}
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">목제 : id값 {{articleItem.id}}</label>
+        <input value={{title}} type="text" name="title" class="form-control" id="exampleFormControlInput1" value="" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">내용</label>
+        <textarea name="content" class="form-control" id="exampleFormControlTextarea1" rows="3" readonly>{{articleItem.title}}</textarea>
+    </div>
+{{/articleItem}}
+
+    <a href="/articles/{{articleItem.id}}/edit"> 수정 글</a>
+    <a href="/articles/{{articleItem.id}}/delete">삭제 글</a>
+
+{{> layouts/footer}}
