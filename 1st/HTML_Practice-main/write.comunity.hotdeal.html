@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글쓰기</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fa8072;
+            border-bottom: 1px solid #fa8072;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .search-bar {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-bar input {
+            width: 60%;
+            padding: 10px;
+            font-size: 18px;
+            box-sizing: border-box;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .auth-buttons button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .write-post input[type="text"],
+        .write-post textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .write-post textarea {
+            height: 200px;
+            resize: none;
+        }
+
+        .write-post button {
+            width: 100%;
+            padding: 10px;
+            background-color: #fa8072;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .write-post button:hover {
+            background-color: #ff6347;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo" onclick="location.href='./index.html'">커뮤니티</div>
+        <div class="search-bar">
+            <input type="text" placeholder="검색...">
+            <button>검색</button>
+        </div>
+        <div class="auth-buttons">
+            <button onclick="location.href='./login.hotdeal.html'">로그인</button>
+            <button onclick="location.href='./signup.hotdeal.html'">회원가입</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>글쓰기</h2>
+        <div class="write-post" id="writePostForm">
+            <input type="text" id="postTitle" placeholder="제목" required>
+            <textarea id="postContent" placeholder="내용을 입력하세요" required></textarea>
+            <button onclick="submitPost()">작성하기</button>
+        </div>
+    </div>
+
+    <script>
+        function submitPost() {
+            var title = document.getElementById('postTitle').value;
+            var content = document.getElementById('postContent').value;
+
+            if (title && content) {
+                // 여기서 서버로 게시글 데이터를 전송할 수 있습니다.
+                alert('게시글이 작성되었습니다.');
+                document.getElementById('postTitle').value = '';
+                document.getElementById('postContent').value = '';
+                window.location.href = "./comunity.hotdeal.html";
+
+            } else {
+                alert('제목과 내용을 입력하세요.');
+            }
+        }
+    </script>
+</body>
+</html>

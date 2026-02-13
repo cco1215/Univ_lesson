@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            background: url('fire.gif') repeat;
+            background-size: cover;
+        }
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fa8072;
+            border-bottom: 1px solid #fa8072;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .search-bar {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-bar input {
+            width: 60%;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .auth-buttons button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            margin-left:auto; 
+            margin-right:auto;
+        }
+
+        .container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #fa8072;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .container button:hover {
+            background-color: #ff6347;
+        }
+
+        .container .message {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .container .message a {
+            color: #fa8072;
+            text-decoration: none;
+        }
+        nav {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffa07a;
+            padding: 10px 0;
+            background: url('fire.gif') repeat;
+            background-size: cover;
+        }
+
+        nav button {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        main {
+            width: 100%;
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1200px;
+        }
+
+        section {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f8f8f8;
+            border-top: 1px solid #e7e7e7;
+        }
+        .table_center {
+	    display : table;
+	    margin-left : auto;
+	    margin-right : auto;
+        
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo" onclick="location.href=&#39;./index.html&#39;">핫딜</div>
+        <div class="search-bar">
+            <input type="text" placeholder="검색...">
+            <button>검색</button>
+        </div>
+        <div class="auth-buttons">
+            <button onclick="location.href='./login.hotdeal.html'">로그인</button>
+            <button onclick="location.href='./signup.hotdeal.html'">회원가입</button>
+        </div>
+    </header>
+
+>
+<table class="table_center">
+<div class="container">
+        <h2>로그인</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="사용자 이름" required="">
+            <input type="password" id="password" placeholder="비밀번호" required="">
+            <button type="submit">로그인</button>
+        </form>
+        <div>
+            <p>회원이 아니신가요? <a onclick="href='./signup.hotdeal.html'">회원가입</a></p>
+        </div>
+    </div>
+</table>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('로그인 시도');
+        });
+    </script>
+
+
+</body></html>
